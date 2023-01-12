@@ -67,9 +67,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenreader
   Hier korte omschrijving (met indien nodig afbeeldingen)
-
+  Bij de homepagina heb je links, afbeeldingen en radio sectie. Wat doet die precies?
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Betere betekenis geven aan de knoppen in de nav en een betere betekenis/omschrijving
+  De screenreader gaat naar een onzichtbare search en het hamburger menu ligt buiten het beeld.
 
+  Daarnaast omschrijven de afbeeldingen niet waar het over gaat.
+  Er is geen heading voor featured items, Geen logische en goede volgdorde van voiceovers.
+  De CTA is niet duidelijkd als het wordt voorgelezen door een screenreader. Volgende en vorige knop pakt hij niet. Bij de social knoppen is geen heading. Bij de footer wordt niet laten weten dat je in een footer zit, e-mail.
+  De volgorde van het formulier klopt niet.
+
+  Bij de formulierpagina:
+  Leest niet volledige breadcrumbs, skipt de heading. Slaat kleuren over. Informatie zonder titel. Bij de producten is geen heading. Deelknop staat in een aparte lijst. Voettekst en navigatie volgorde klopt niet helemaal. De headings kloppen daarnaast niet in het algemeen.
 
   #### Muis en Toetsenbord 
   Hier korte omschrijving (met indien nodig afbeeldingen)
@@ -78,15 +87,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   #### Motoriek (shocks, elastiekjes)
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
+   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Bij het bedienen van de site kan het over het algemeen wel als je wilt shoppen. Er is geen gebruik gemaakt van sliders oid die door mensen met een motorische beperking niet gebruikt kunnen worden.
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  N.v.t.
 
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
-
+   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Bij de formulierenpagina is de tekst slecht leesbaar. Vooral grijs op oranje. tekst onderaan is niet goed te lezen met de brillen op en add te cart is lastig te zien.
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  Om dit te verhelpen is een tooltip goed van toepassing icm een screenreader.
 
 </details>
 
@@ -97,14 +108,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 <details>
   <summary>uitwerken na afloop 2e werkgroep</summary>
 
-  ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+   ### de hele pagina: 
+<img src="/images/breakdown1.jpg" width="375px" alt="Breakdown">
+<img src="/images/breakdown2.jpg" width="375px" alt="Breakdown">
+<img src="/images/breakdown3.jpg" width="375px" alt="Breakdown">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
-
-  ### wellicht nog een dynamisch deel (bijv filter): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
+<img src="/images/breakdown4.jpg" width="375px" alt="Breakdown Pagina 2">
+<img src="/images/breakdown5.jpg" width="375px" alt="Breakdown Pagina 2">
 
 </details>
 
@@ -119,14 +130,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  HTML was niet helemaal op orde. CSS ging ook niet zo soepel. Mede ook niet zo veel tijd erin gestoken. 
+  <img src="/images/voortgang1.jpg" width="375px" alt="Stuk code">
+  <img src="/images/voortgang1.1.jpg" width="375px" alt="Screenshot website">
 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Melvin      | Reduane          | Deveney    | Diem        |
   | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+  | HTML. Is dit correct?  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
   | ...            | ...                | ...          | ...              |
 
@@ -134,10 +148,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Meer tijd erin stoppen. Meer coderen.
+  - 
+  - 
+  - 
 
 </details>
 
@@ -152,12 +166,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Nog steeds niet helemaal zoals ik wilde. Niet goed op weg en ik had een site gekozen die best moeilijk is. Ik liep continu vast bij het maken van de footer. Verder kwam ik niet. Heel erg frustrerend.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
 
-  | student 1      | student 2          | student 3    | student 4        |
+  | Melvin      | Reduane          | Deveney    | Diem        |
   | ---            | ---                | ---          | ---              |
   | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
   | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
@@ -222,7 +236,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
+  Ik heb een andere website gekozen. Nu ben ik van carhartt-wip.com overgestapt naar de website van Stimorol.  
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -280,8 +294,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. https://www.stimorol.nl/
+  2. https://stackoverflow.com/questions/19307443/semantic-html-of-an-articles-list
+  3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  4. https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+  5. https://css-tricks.com/snippets/css/complete-guide-grid/
+  6. https://www.w3schools.com/cssref/pr_background-image.php
+  7. https://www.browserstack.com/guide/how-to-make-images-responsive#:~:text=Here's%20how%20to%20create%20responsive,width%20of%20the%20device%20viewport.
+  8. 
 
 </details>
