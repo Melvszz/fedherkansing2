@@ -17,15 +17,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Auteur:
   Melvin Rooth
-  
+
   #### Je startniveau:
-  Blauw (kies uit zwart, rood óf blauw)
+  Blauw
 
   #### Je focus:
-  Responsive (kies uit responsive óf surface plane)
+  Responsive
  
-  ### GitHub:
-  https://melvszz.github.io/fedherkansing2/
 </details>
 
 
@@ -38,16 +36,23 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  https://www.stimorol.nl/
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+  <img src="images/screenshot1.jpg" width="375px" alt="Viewport pagina">
+  <img src="images/screenshot2.jpg" width="375px" alt="sectie ontdek">
+  <img src="images/screenshot3.jpg" width="375px" alt="artikelen">
+  <img src="images/screenshot4.jpg" width="375px" alt="artikelen">
+  <img src="images/screenshot5.jpg" width="375px" alt="footer">
+
+
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
- 
+  <img src="images/screenshot6.jpg" width="375px" alt="formuliertje">
+  <img src="images/screenshot7.jpg" width="375px" alt="formuliertje">
+  <img src="images/screenshot8.jpg" width="375px" alt="formuliertje">
 </details>
 
 

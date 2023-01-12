@@ -2,13 +2,23 @@
 /* CSS REMEDY */
 /**************/
 *, *::after, *::before {
-  box-sizing:border-box;  
+  box-sizing:border-box;
+  text-decoration: none;
+  font-family: 'barlow', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-text);
 }
 
 button, summary {
 	cursor: pointer;
 }
 
+/* neemt hele pagina in beslag, ook randjes */
+body{
+	margin:0;
+}
 
 
 
@@ -18,8 +28,10 @@ button, summary {
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
+	--color-text:#ffffff;
 	--color-background:#eee;
+	--color-red:#e30714;
+	--color-blauw:#273372;
 }
 
 
@@ -30,5 +42,99 @@ button, summary {
 /* JOUW STYLING */
 /****************/
 
-/* jouw code */
+
+main{
+	background-color:
+}
+
+li {
+	list-style: none;
+}
+
+/* whitespace top weghalen */
+ul {
+	margin:auto;
+}
+/* HEADER */
+
+header {
+	top:100%;
+	background-color: var(--color-blauw);
+
+
+}
+
+header h1{
+	visibility: hidden;
+}
+
+header ul {
+	display: flex;
+	justify-content:left;
+	gap: 2em;
+}
+
+header ul li {
+
+}
+
+header ul li p {
+
+}
+
+/* Responsive background red */
+section:first-of-type{
+	background-image: url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
+	background-position: center center;
+	background-size: cover;
+
+}
+
+
+
+
+
+/* MAIN */
+section:nth-last-of-type(2) {
+	background-color:var(--color-blauw);
+}
+
+
+/* Artikelen */
+main section:last-of-type article{
+	background-color:var(--color-red);
+}
+
+
+ Kleine tekst linksboven artikelen
+section:nth-of-type(3) article p {
+	color: var(--color-red);
+
+}
+
+/* FOOTER */
+
+footer{
+	background-color:var(--color-red);
+}
+
+
+
+/* OVERIGE */
+
+button {
+	background: #fff;
+	font-weight: 600;
+	color: var(--color-blauw);
+	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
+	border: none;
+}
+
+button a{
+	color: var(--color-blauw);
+	font-size: smaller;
+}
+
+
+
 
