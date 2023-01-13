@@ -60,7 +60,7 @@ ul {
 header {
 	top:100%;
 	background-color: var(--color-blauw);
-
+	padding: 1em 2em 1em 2em;
 
 }
 
@@ -74,13 +74,17 @@ header ul {
 	gap: 2em;
 }
 
-header ul li {
+header button {
 
 }
 
-header ul li p {
 
-}
+
+
+
+
+
+/* MAIN */
 
 /* Responsive background red */
 section:first-of-type{
@@ -90,11 +94,15 @@ section:first-of-type{
 
 }
 
+main section:first-of-type nav{
+	visibility: hidden;
+}
 
+main section h3{
+    display: grid;
+    align-items: center;
+}
 
-
-
-/* MAIN */
 section:nth-last-of-type(2) {
 	background-color:var(--color-blauw);
 }
@@ -112,22 +120,75 @@ section:nth-of-type(3) article p {
 
 }
 
+
+
+
+
+
 /* FOOTER */
+
+/* Socials Icons */
 
 footer{
 	background-color:var(--color-red);
+	BOTTOM
 }
 
+footer ul:first-of-type {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
+footer ul:first-of-type li {
+	padding: 1em 1em 1em 1em;
+	
+}
+
+footer ul:first-of-type li a{
+	
+}
+
+/* Links in de footer */
+footer ul:nth-of-type(2) li {
+	/* display: flex; */
+
+
+}
+
+footer ul:nth-of-type(2) li a{
+	
+
+	
+}
+
+/* Tekst onderaan p */
+footer p {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: smaller;
+}
+
+/* Logo onderaan */
+footer a:last-of-type img {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 1em;
+
+}
 
 /* OVERIGE */
 
-button {
-	background: #fff;
+/* HEADER SCHUIN */ 
+header >  button {
+	background-image: linear-gradient(115deg, transparent .7em, white .7em);
 	font-weight: 600;
 	color: var(--color-blauw);
 	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
 	border: none;
+	background-color: transparent;
+	padding-left:1em;
 }
 
 button a{
@@ -137,4 +198,15 @@ button a{
 
 
 
+ /* Zo gedaan zodat hij niet groter wordt dan */
+img {
+	max-width: 100%;
+	height: auto;
+}
 
+
+
+/* .open is voor js. Als hij is uitgeklapt voor hamburger menu bijvoorbeeld */
+
+/* Text align center voor de dingen die je niet flext. Niet overmatig flexen */
+/* :hover -> daar moet je hem stylen. */
