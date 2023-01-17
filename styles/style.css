@@ -53,6 +53,7 @@ body{
 
 /* HEADER */
 
+
 header {
 	top:100%;
 	background-color: var(--color-blauw);
@@ -94,29 +95,57 @@ header >  button {
 	right: 1em;
 	top: 4em;
 	min-width: 2em;
+	aspect-ratio: 1/1;;
 	padding-inline: 1em;
 	padding-block: .5em;
 }
 
 header > button > ul {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	/* flex-direction: column; */
 	list-style: none;
 	margin-left: 0;
 	padding-left: 0;
-	gap: 0.3em;
+	/* gap: 0.3em; */
 }
 
 header > button > ul > li {
-	height: 3px;
+	height: .17em;
 	width: 1em;
 	background-color: var(--color-blauw);
+	grid-column-start:1;
+	grid-row-start:1;
+	transition: .25s;
 }
+
+/* hamburger menu gesloten */
+header > button > ul > li:nth-of-type(1) {
+	transform: translateY(-.33em);
+}
+header > button > ul > li:nth-of-type(3) {
+	transform: translateY(.33em);
+}
+
+
+
+/* hamburger menu als hij open is */
+header > button.open > ul > li:nth-of-type(1) {
+	transform: rotate(45deg);
+}
+header > button.open > ul > li:nth-of-type(2) {
+	transform: scaleX(0);
+}
+header > button.open > ul > li:nth-of-type(3) {
+	transform: rotate(-45deg);
+}
+
+
+
 
 
 /* MAIN */
 
-li {
+main li {
 	list-style: none;
 }
 
@@ -420,4 +449,9 @@ main button{
 		margin-inline: 10em;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
+}
+
+
+
+ button {
 }

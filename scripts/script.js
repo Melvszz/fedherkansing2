@@ -8,4 +8,5 @@ deMenuButton.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
 	deNav.classList.toggle("open");
+	deMenuButton.classList.toggle("open");
 }
