@@ -201,15 +201,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
 
   #### Screenreader
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Images bij de artikelen hebben geen alt tekst. Die zijn nodig. Omschrijving van de links zijn goed. Alle headings zijn compleet en goed. Order is veranderd in CSS. Dat is netjes. Verder bij de socials in de footer laat hij de plaatjes niet zien maar leest hij ze wel voor. 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-
+  Alt tekst toevoegen. 
 
   #### Muis en Toetsenbord 
-  Hier korte omschrijving (met indien nodig afbeeldingen)
+  Bij het klikken op enter van het hamburger menu focust hij naar de social facebook bovenaan. Na de socials gaat hij wel netjes naar de volgende h2, dan de button etc. Bij de tweede artikel zit geen image. ook weer bij de socials onderaan laat hij de plaatjes niet zien, die zijn verborgen maar kan je er wel doorheen tabben. a:hover
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
+  
 
 
   #### Motoriek (shocks, elastiekjes)
@@ -220,6 +221,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Visueel (brillen, contrast, kleurenblind, dark/light). 
   Hier korte omschrijving (met indien nodig afbeeldingen)
+  Bij de states (hover bijv.) een kleur toevoegen in de huisstijl (blauw bijvoorbeeld). Die mist.
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
 
