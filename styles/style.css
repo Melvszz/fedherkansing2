@@ -15,10 +15,6 @@ button, summary {
 	cursor: pointer;
 }
 
-/* neemt hele pagina in beslag, ook randjes */
-body{
-	margin:0;
-}
 
 
 
@@ -42,65 +38,185 @@ body{
 /* JOUW STYLING */
 /****************/
 
-
-main{
-	background-color:
-}
-
-li {
-	list-style: none;
-}
-
 /* whitespace top weghalen */
 ul {
 	margin:auto;
 }
+
+/* neemt hele pagina in beslag, ook randjes */
+body{
+	margin:0;
+}
+
+
 /* HEADER */
 
 header {
 	top:100%;
 	background-color: var(--color-blauw);
 	padding: 1em 2em 1em 2em;
+	position: relative;
+	z-index: 50;
 
 }
 
-header h1{
-	visibility: hidden;
+
+/*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+
+header > h1{
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
-header ul {
+header > ul {
 	display: flex;
 	justify-content:left;
 	gap: 2em;
 }
 
-header button {
 
+/* HEADER SCHUIN */ 
+header >  button {
+	background-image: linear-gradient(110deg, transparent .7em, white .7em);
+	font-weight: 600;
+	color: var(--color-blauw);
+	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	right: 1em;
+	top: 4em;
+	min-width: 2em;
+	padding-inline: 1em;
+	padding-block: .5em;
 }
 
+header > button > ul {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	gap: 0.5em;
+}
 
-
-
-
+header > button > ul > li {
+	height: 6px;
+	width: 1em;
+	background-color: var(--color-blauw);
+}
 
 
 /* MAIN */
 
+li {
+	list-style: none;
+}
+
+
+/* Eerste sectie onderaan de header */
+main section:nth-of-type(1) {
+display: grid;
+
+}
+
+main section:nth-of-type(1) nav {
+
+
+}
+
+main section:nth-of-type(1) nav ul {
+
+
+}
+
+main section:nth-of-type(1) nav ul li {
+
+
+}
+
+main section:nth-of-type(1) h2 {
+	text-align: center;
+	font-weight: bold;
+	order:1;
+
+}
+
+main section:nth-of-type(1) h3 {
+	text-align: center;
+	font-size: 1.5em;
+	padding-inline: 2em;
+	order:2;
+}
+
+main section:nth-of-type(1) a {
+
+}
+
+main section:nth-of-type(1) > svg {
+	order:4;
+	align-items: center;
+
+}
+
+main section:nth-of-type(1) > button a{ 
+	order: 3;
+	padding: .5em .5em .5em .5em;
+	width: 7em;
+}
+
+/*  */
+main section:nth-of-type(2) {
+	background: var(--color-blauw);
+	display: grid;
+}
+
+main section:nth-of-type(2) > h2 {
+	padding-top: 4em;
+	text-align: center;
+}
+
+main section:nth-of-type(2) > h3 {
+	text-align: center;
+	font-size: 2em;
+}
+
+main section:nth-of-type(2) > button {
+	display: table;
+    position: relative;
+    font-size: .9em;
+    font-weight: 600;
+    background: #fff;
+	padding:.8em;
+    color: #273372;
+    box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
+}
+
+main section:nth-of-type(2) img{
+	max-width: 13em;
+	justify-content: center;
+}
+
+
 /* Responsive background red */
 section:first-of-type{
 	background-image: url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
-	background-position: center center;
-	background-size: cover;
-
+	background-position:center center;
+	background-size:cover;
 }
 
 main section:first-of-type nav{
-	visibility: hidden;
+	visibility:hidden;
 }
 
 main section h3{
-    display: grid;
-    align-items: center;
+    display:grid;
+    align-items:center;
 }
 
 section:nth-last-of-type(2) {
@@ -108,21 +224,57 @@ section:nth-last-of-type(2) {
 }
 
 
-/* Artikelen */
-main section:last-of-type article{
+/* ARTIKELEN STIMOROL */
+
+/* h2 - ONTDEK ALLE PRODUCTEN */
+section:nth-last-of-type(1) > h2 {
+	font-size:1.5em;
+	font-weight:bold;
+	color:var(--color-red);
+	text-align:center;
+	/* padding:1em 0em 1em 0em; */
+}
+
+/* CONTAINER list artikelen */
+section:nth-last-of-type(1) > ul {
+	display:grid;
+	/* grid-template-columns:  repeat(3, 1fr); */
+	margin:0 0.3em 0 0.3em;
+	gap:0.5em;
+	padding: 0;
+}
+
+
+
+/* BLOKJE boven artikel */
+section:nth-last-of-type(1) ul li{
 	background-color:var(--color-red);
-}
-
-
- Kleine tekst linksboven artikelen
-section:nth-of-type(3) article p {
-	color: var(--color-red);
+		display:grid;
 
 }
 
+/* TITEL artikel */
+main > section:nth-last-of-type(1)  ul li h3 {
+	font-size: 2em;
+	color: var(--color-text);
+	text-align: center;
+	order:2;
+}
 
+/* KAUWGOM tekst boven artikel */
+main > section:nth-last-of-type(1) ul li h4 {
+	padding: .5em 2em .5em .5em;
+	position: absolute;
+	background-color: var(--color-blauw);
+	float: left;
+	float: top;
+	transform: translateY(-1.35em);
+	order:1;
+}
 
-
+main > section:nth-last-of-type(1) ul li a {
+	order:3;
+}
 
 
 /* FOOTER */
@@ -130,8 +282,8 @@ section:nth-of-type(3) article p {
 /* Socials Icons */
 
 footer{
+	margin-top:2em;
 	background-color:var(--color-red);
-	BOTTOM
 }
 
 footer ul:first-of-type {
@@ -151,52 +303,59 @@ footer ul:first-of-type li a{
 
 /* Links in de footer */
 footer ul:nth-of-type(2) li {
-	/* display: flex; */
-
-
-}
-
-footer ul:nth-of-type(2) li a{
-	
-
-	
+	display: flex;
+	justify-content: center;
+	padding:0.5em;
 }
 
 /* Tekst onderaan p */
-footer p {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+footer > p {
+	text-align: center;
+	text-transform: none;
 	font-size: smaller;
+	font-weight: 300;
 }
 
 /* Logo onderaan */
-footer a:last-of-type img {
+
+footer > a {
+	display: flex;
+	padding: 1em 0em 2em 1em;
+	justify-content: center;
+}
+
+/* NAAR BOVEN knop onderaan de pagina*/
+body > a:last-of-type {
+	text-transform: none;
+	letter-spacing: .05em;
 	display: flex;
 	justify-content: center;
-	padding-bottom: 1em;
-
+	color:#e30714;
+	background-color: white;
+	padding: 1em 2em 2em 1em;
 }
+
+body > a button {
+	height:1em;
+   	width:1em;
+	display: inline-block;
+	margin-right: .8em;
+	border-left: .25em solid var(--color-red);
+	border-top: .25em solid var(--color-red);
+	border-right:none;
+	border-bottom: none;
+	color: var(--color-red);
+	transform: translateY(1em);
+	transform: rotate(45deg);
+	background-color: transparent;
+}
+
 
 /* OVERIGE */
-
-/* HEADER SCHUIN */ 
-header >  button {
-	background-image: linear-gradient(115deg, transparent .7em, white .7em);
-	font-weight: 600;
-	color: var(--color-blauw);
-	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
-	border: none;
-	background-color: transparent;
-	padding-left:1em;
-}
-
 button a{
 	color: var(--color-blauw);
 	font-size: smaller;
 }
-
-
 
  /* Zo gedaan zodat hij niet groter wordt dan */
 img {
@@ -205,8 +364,58 @@ img {
 }
 
 
-
 /* .open is voor js. Als hij is uitgeklapt voor hamburger menu bijvoorbeeld */
 
 /* Text align center voor de dingen die je niet flext. Niet overmatig flexen */
 /* :hover -> daar moet je hem stylen. */
+
+
+footer > p {
+	text-align: center;
+}
+
+
+
+
+nav.open {
+	background-color:var(--color-blauw);
+	background-image: url(/images/navi-bg.png);
+	float:bottom;
+}
+
+main section:first-of-type nav.open {
+	visibility: visible;
+	text-align: center;
+	padding-block: 4em;
+	justify-content: space-between;
+	/* z-index: 100; */
+}
+
+main section:first-of-type nav.open ul {
+	display: flex;
+	flex-direction: column;
+	gap:1em;
+
+}
+
+main section:first-of-type nav.open ul li {
+	font-size:x-large;
+
+}
+
+main button{
+
+}
+
+
+/* PAGINA 2 */
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 48em) {
+	section:nth-last-of-type(1) > ul {
+		margin-inline: 10em;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

@@ -292,13 +292,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-  1. https://www.stimorol.nl/
-  2. https://stackoverflow.com/questions/19307443/semantic-html-of-an-articles-list
-  3. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-  4. https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
-  5. https://css-tricks.com/snippets/css/complete-guide-grid/
-  6. https://www.w3schools.com/cssref/pr_background-image.php
-  7. https://www.browserstack.com/guide/how-to-make-images-responsive#:~:text=Here's%20how%20to%20create%20responsive,width%20of%20the%20device%20viewport.
-  8. 
+  1. https://stackoverflow.com/questions/19307443/semantic-html-of-an-articles-list
+  2. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  3. https://stackoverflow.com/questions/20340138/remove-blue-border-from-css-custom-styled-button-in-chrome
+  4. https://css-tricks.com/snippets/css/complete-guide-grid/
+  5. https://www.w3schools.com/cssref/pr_background-image.php
+  6. https://www.browserstack.com/guide/how-to-make-images-responsive#:~:text=Here's%20how%20to%20create%20responsive,width%20of%20the%20device%20viewport.
+  7. https://alvarotrigo.com/blog/hamburger-menu-css/
 
 </details>
