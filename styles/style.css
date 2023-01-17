@@ -53,6 +53,9 @@ body{
 
 /* HEADER */
 
+header li {
+	list-style: none;
+}
 
 header {
 	top:100%;
@@ -95,7 +98,7 @@ header >  button {
 	right: 1em;
 	top: 4em;
 	min-width: 2em;
-	aspect-ratio: 1/1;;
+	aspect-ratio: 1/1;
 	padding-inline: 1em;
 	padding-block: .5em;
 }
@@ -153,6 +156,7 @@ main li {
 /* Eerste sectie onderaan de header */
 main section:nth-of-type(1) {
 display: grid;
+padding:2em;
 
 }
 
@@ -166,8 +170,16 @@ main section:nth-of-type(1) nav ul {
 
 }
 
+
 main section:nth-of-type(1) nav ul li {
 
+
+}
+
+main section:nth-of-type(1+2) button {
+	height: 1em;
+	width: 8em;
+	justify-content: center;
 
 }
 
@@ -205,7 +217,11 @@ main section:nth-of-type(1) > button a{
 main section:nth-of-type(2) {
 	background: var(--color-blauw);
 	display: grid;
+	gap: 1em;
+	padding-bottom:2em;
 }
+
+
 
 main section:nth-of-type(2) > h2 {
 	padding-top: 4em;
@@ -217,7 +233,7 @@ main section:nth-of-type(2) > h3 {
 	font-size: 2em;
 }
 
-main section:nth-of-type(2) > button {
+/* main section:nth-of-type(2) > button {
 	display: table;
     position: relative;
     font-size: .9em;
@@ -226,7 +242,7 @@ main section:nth-of-type(2) > button {
 	padding:.8em;
     color: #273372;
     box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
-}
+} */
 
 main section:nth-of-type(2) img{
 	max-width: 13em;
@@ -366,7 +382,7 @@ body > a:last-of-type {
 	padding: 1em 2em 2em 1em;
 }
 
-body > a button {
+body > a > button {
 	height:1em;
    	width:1em;
 	display: inline-block;
@@ -405,7 +421,9 @@ footer > p {
 	text-align: center;
 }
 
-
+footer > ul {
+	list-style: none;
+}
 
 
 nav.open {
@@ -434,10 +452,6 @@ main section:first-of-type nav.open ul li {
 
 }
 
-main button{
-
-}
-
 
 /* PAGINA 2 */
 
@@ -449,9 +463,4 @@ main button{
 		margin-inline: 10em;
 		grid-template-columns: 1fr 1fr 1fr;
 	}
-}
-
-
-
- button {
 }
