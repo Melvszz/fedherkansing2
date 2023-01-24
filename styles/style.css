@@ -3,20 +3,20 @@
 /**************/
 *, *::after, *::before {
   box-sizing:border-box;
-  text-decoration: none;
-  font-family: 'barlow', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--color-text);
+  text-decoration:none;
+  font-family:'barlow', sans-serif;
+  font-size:18px;
+  font-weight:700;
+  text-transform:uppercase;
+  color:var(--color-text);
 }
 
 button, summary {
-	cursor: pointer;
+	cursor:pointer;
 }
 
 a:hover {
-	text-decoration: underline;
+	text-decoration:underline;
 }
 
 
@@ -53,16 +53,23 @@ body{
 
 /* HEADER */
 
+header img {
+	position:absolute;
+	max-width:8em;
+	transform:translateY(3em);
+	z-index:5;
+}
+
 header li {
-	list-style: none;
+	list-style:none;
 }
 
 header {
 	top:100%;
-	background-color: var(--color-blauw);
-	padding: 1em 2em 1em 2em;
-	position: relative;
-	z-index: 50;
+	background-color:var(--color-blauw);
+	padding:1em 2em 1em 2em;
+	position:relative;
+	z-index:50;
 
 }
 
@@ -70,76 +77,76 @@ header {
 /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
 
 header > h1{
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
+	clip:rect(0 0 0 0);
+	clip-path:inset(50%);
+	height:1px;
+	overflow:hidden;
+	position:absolute;
+	white-space:nowrap;
+	width:1px;
 }
 
 header > ul {
-	display: flex;
+	display:flex;
 	justify-content:left;
-	gap: 2em;
+	gap:2em;
 }
 
 
 /* HEADER SCHUIN */ 
 header >  button {
-	background-image: linear-gradient(110deg, transparent .7em, white .7em);
-	font-weight: 600;
-	color: var(--color-blauw);
-	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
-	border: none;
-	background-color: transparent;
+	background-image:linear-gradient(110deg, transparent .7em, white .7em);
+	font-weight:600;
+	color:var(--color-blauw);
+	box-shadow:5px 5px 10px 0 rgb(0 0 0 / 25%);
+	border:none;
+	background-color:transparent;
 	position: absolute;
-	right: 1em;
-	top: 4em;
-	min-width: 2em;
-	aspect-ratio: 1/1;
-	padding-inline: 1em;
-	padding-block: .5em;
+	right:1em;
+	top:4em;
+	min-width:2em;
+	aspect-ratio:1/1;
+	padding-inline:1em;
+	padding-block:.5em;
 }
 
+/* HAMBURGER ICON */
 header > button > ul {
-	display: grid;
-	/* flex-direction: column; */
-	list-style: none;
-	margin-left: 0;
-	padding-left: 0;
-	/* gap: 0.3em; */
+	display:grid;
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
 }
 
 header > button > ul > li {
-	height: .17em;
-	width: 1em;
-	background-color: var(--color-blauw);
+	height:.17em;
+	width:1em;
+	background-color:var(--color-blauw);
 	grid-column-start:1;
 	grid-row-start:1;
-	transition: .25s;
+	transition:.25s;
+	
 }
 
 /* hamburger menu gesloten */
 header > button > ul > li:nth-of-type(1) {
-	transform: translateY(-.33em);
+	transform:translateY(-.33em);
 }
 header > button > ul > li:nth-of-type(3) {
-	transform: translateY(.33em);
+	transform:translateY(.33em);
 }
 
 
 
 /* hamburger menu als hij open is */
 header > button.open > ul > li:nth-of-type(1) {
-	transform: rotate(45deg);
+	transform:rotate(45deg);
 }
 header > button.open > ul > li:nth-of-type(2) {
-	transform: scaleX(0);
+	transform:scaleX(0);
 }
 header > button.open > ul > li:nth-of-type(3) {
-	transform: rotate(-45deg);
+	transform:rotate(-45deg);
 }
 
 
@@ -149,110 +156,113 @@ header > button.open > ul > li:nth-of-type(3) {
 /* MAIN */
 
 main li {
-	list-style: none;
+	list-style:none;
+}
+
+section button {
+	justify-content:center;
+	max-width:3em;
 }
 
 
 /* Eerste sectie onderaan de header */
 main section:nth-of-type(1) {
-display: grid;
-padding:2em;
-
+display:grid;
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: .5fr .5fr .2fr 1fr;
+padding-top:3em;
 }
 
-main section:nth-of-type(1) nav {
-
-
-}
-
-main section:nth-of-type(1) nav ul {
-
-
-}
-
-
-main section:nth-of-type(1) nav ul li {
-
-
-}
-
-main section:nth-of-type(1+2) button {
-	height: 1em;
-	width: 8em;
-	justify-content: center;
-
-}
 
 main section:nth-of-type(1) h2 {
-	text-align: center;
-	font-weight: bold;
+	grid-row-start: 1;
+	grid-column-start: 3;
+	text-align:center;
+	font-weight:bold;
 	order:1;
-
+	font-size:x-large;
+	align-self: end;
 }
 
 main section:nth-of-type(1) h3 {
-	text-align: center;
-	font-size: 1.5em;
-	padding-inline: 2em;
+	text-align:center;
+	font-size:xx-large;
+	padding-inline:2em;
 	order:2;
+	grid-row-start:2;
+	grid-column-start:3;
 }
 
-main section:nth-of-type(1) a {
 
-}
 
 main section:nth-of-type(1) > svg {
 	order:4;
-	align-items: center;
-
+	align-items:center;
+	grid-row-start:4;
+	grid-column-start:3;
 }
+
+main section:nth-of-type(1) > button {
+	grid-row-start:3;
+	grid-column-start:3;
+	justify-self: center;
+	height: 4em;
+	width: 8em;
+	padding-block:2em;
+}
+
 
 main section:nth-of-type(1) > button a{ 
-	order: 3;
-	padding: .5em .5em .5em .5em;
-	width: 7em;
+
+	
 }
 
-/*  */
+/*  Tweede sectie, blauw */
 main section:nth-of-type(2) {
-	background: var(--color-blauw);
-	display: grid;
-	gap: 1em;
+	background:var(--color-blauw);
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: .5fr .5fr .2fr 1fr;
+	padding-top:3em;
+	gap:1em;
 	padding-bottom:2em;
 }
 
 
 
 main section:nth-of-type(2) > h2 {
-	padding-top: 4em;
-	text-align: center;
+	padding-top:4em;
+	text-align:center;
+	font-size:x-large;
+	grid-row-start:1;
+	grid-column-start:3;
 }
 
 main section:nth-of-type(2) > h3 {
-	text-align: center;
-	font-size: 2em;
+	text-align:center;
+	font-size:2em;
+	grid-row-start:2;
+	grid-column-start:3;
 }
 
-/* main section:nth-of-type(2) > button {
-	display: table;
-    position: relative;
-    font-size: .9em;
-    font-weight: 600;
-    background: #fff;
-	padding:.8em;
-    color: #273372;
-    box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
-} */
+main section:nth-of-type(2) > button {
+	grid-row-start:3;
+	grid-column-start:3;
+	justify-self: center;
+	width: 5em;
+}
 
 main section:nth-of-type(2) img{
 	max-width: 13em;
 	justify-content: center;
+	grid-row-start:4;
+	grid-column-start:3;
 }
 
 
 /* Responsive background red */
 section:first-of-type{
-	background-image: url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
+	background-image:url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
 	background-position:center center;
 	background-size:cover;
 }
@@ -262,8 +272,6 @@ main section:first-of-type nav{
 }
 
 main section h3{
-    display:grid;
-    align-items:center;
 }
 
 section:nth-last-of-type(2) {
@@ -279,7 +287,7 @@ section:nth-last-of-type(1) > h2 {
 	font-weight:bold;
 	color:var(--color-red);
 	text-align:center;
-	/* padding:1em 0em 1em 0em; */
+	padding:1em 0em 1em 0em;
 }
 
 /* CONTAINER list artikelen */
@@ -344,9 +352,6 @@ footer ul:first-of-type li {
 	
 }
 
-footer ul:first-of-type li a{
-	
-}
 
 /* Links in de footer */
 footer ul:nth-of-type(2) li {
@@ -382,7 +387,7 @@ body > a:last-of-type {
 	padding: 1em 2em 2em 1em;
 }
 
-body > a > button {
+a > button {
 	height:1em;
    	width:1em;
 	display: inline-block;
@@ -404,17 +409,12 @@ button a{
 	font-size: smaller;
 }
 
- /* Zo gedaan zodat hij niet groter wordt dan */
-img {
+
+ /* Zo gedaan zodat hij niet groter wordt dan de containers */
+main section:nth-of-type(3) img {
 	max-width: 100%;
 	height: auto;
 }
-
-
-/* .open is voor js. Als hij is uitgeklapt voor hamburger menu bijvoorbeeld */
-
-/* Text align center voor de dingen die je niet flext. Niet overmatig flexen */
-/* :hover -> daar moet je hem stylen. */
 
 
 footer > p {
@@ -423,6 +423,11 @@ footer > p {
 
 footer > ul {
 	list-style: none;
+}
+
+footer > ul li a:hover {
+	color: #273372;
+	text-decoration: underline;
 }
 
 
@@ -437,7 +442,12 @@ main section:first-of-type nav.open {
 	text-align: center;
 	padding-block: 4em;
 	justify-content: space-between;
-	/* z-index: 100; */
+	z-index: 10;
+	transform: translateY(-3em);
+	grid-row-start: 1;
+	grid-row-end:5;
+	grid-column-start: 1;
+	grid-column-end:6;
 }
 
 main section:first-of-type nav.open ul {
@@ -452,8 +462,6 @@ main section:first-of-type nav.open ul li {
 
 }
 
-
-/* PAGINA 2 */
 
 
 /* MEDIA QUERIES */

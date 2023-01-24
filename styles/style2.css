@@ -1,0 +1,163 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+*, *::after, *::before {
+    box-sizing:border-box;
+    text-decoration: none;
+    font-family: 'barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-text);
+  }
+  
+  button, summary {
+      cursor: pointer;
+  }
+  
+  a:hover {
+      text-decoration: underline;
+  }
+  
+  
+  
+  /*********************/
+  /* CUSTOM PROPERTIES */
+  /*********************/
+  :root {
+      /* startje */
+      --color-text:#ffffff;
+      --color-background:#eee;
+      --color-red:#e30714;
+      --color-blauw:#273372;
+  }
+  
+  
+  
+  
+  
+  /****************/
+  /* JOUW STYLING */
+  /****************/
+  
+  /* whitespace top weghalen */
+  ul {
+      margin:auto;
+  }
+  
+  /* neemt hele pagina in beslag, ook randjes */
+  body{
+      margin:0;
+  }
+  
+  
+  /* HEADER */
+  
+  header li {
+      list-style: none;
+  }
+  
+  header {
+      top:100%;
+      background-color: var(--color-blauw);
+      padding: 1em 2em 1em 2em;
+      position: relative;
+      z-index: 50;
+  
+  }
+  
+  
+  /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+  
+  header > h1{
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+  }
+
+header > ul {
+	display: flex;
+	justify-content:left;
+	gap: 2em;
+}
+
+
+
+
+
+/* FOOTER */
+
+/* Socials Icons */
+
+footer{
+	margin-top:2em;
+	background-color:var(--color-red);
+}
+
+footer ul:first-of-type {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer ul:first-of-type li {
+	padding: 1em 1em 1em 1em;
+	
+}
+
+footer ul:first-of-type li a{
+	
+}
+
+/* Links in de footer */
+footer ul:nth-of-type(2) li {
+	display: flex;
+	justify-content: center;
+	padding:0.5em;
+}
+
+/* Tekst onderaan p */
+footer > p {
+	text-align: center;
+	text-transform: none;
+	font-size: smaller;
+	font-weight: 300;
+}
+
+/* Logo onderaan */
+
+footer > a {
+	display: flex;
+	padding: 1em 0em 2em 1em;
+	justify-content: center;
+}
+
+/* NAAR BOVEN knop onderaan de pagina*/
+body > a:last-of-type {
+	text-transform: none;
+	letter-spacing: .05em;
+	display: flex;
+	justify-content: center;
+	color:#e30714;
+	background-color: white;
+	padding: 1em 2em 2em 1em;
+}
+
+body > a > button {
+	height:1em;
+   	width:1em;
+	display: inline-block;
+	margin-right: .8em;
+	border-left: .25em solid var(--color-red);
+	border-top: .25em solid var(--color-red);
+	border-right:none;
+	border-bottom: none;
+	color: var(--color-red);
+	transform: translateY(1em);
+	transform: rotate(45deg);
+	background-color: transparent;
+}
