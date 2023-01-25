@@ -8,7 +8,7 @@
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: var(--color-blauw);
   }
   
   button, summary {
@@ -50,41 +50,96 @@
       margin:0;
   }
   
-  
   /* HEADER */
+
+  /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+
+header > h1{
+	clip:rect(0 0 0 0);
+	clip-path:inset(50%);
+	height:1px;
+	overflow:hidden;
+	position:absolute;
+	white-space:nowrap;
+	width:1px;
+}
   
   header li {
       list-style: none;
-  }
+}
   
   header {
       top:100%;
-      background-color: var(--color-blauw);
-      padding: 1em 2em 1em 2em;
-      position: relative;
-      z-index: 50;
-  
-  }
-  
-  
-  /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
-  
-  header > h1{
-      clip: rect(0 0 0 0);
-      clip-path: inset(50%);
-      height: 1px;
-      overflow: hidden;
-      position: absolute;
-      white-space: nowrap;
-      width: 1px;
-  }
-
-header > ul {
-	display: flex;
-	justify-content:left;
-	gap: 2em;
+      background-color:var(--color-blauw);
+      padding:1em 2em 1em 2em;
+      position:relative;
+      z-index:50;
 }
 
+header img {
+    max-width:10em;
+}
+  
+header > ul {
+	display:flex;
+	justify-content:left;
+	gap:2em;
+}
+
+
+
+
+
+/* MAIN */
+
+form{
+    padding-inline:2em;
+    padding-block:2em;
+}
+form > h2{
+    font-size:2em;
+}
+
+option {
+    color:var(--color-blauw);
+}
+
+select {
+    color:var(--color-blauw)
+}
+
+select#keuze {
+    padding:.8em;
+    padding-inline:.9em ;
+}
+
+label {
+    display:flex;
+    margin-bottom:1em;
+    padding-top:2em;
+}
+
+input{
+    padding:1em;
+    padding-inline:1em;
+    width:21em;
+}
+
+input:nth-last-of-type(6){
+    color: var(--color-blauw);
+}
+
+input:nth-last-of-type(10){
+    height: 20em;
+}
+
+input:nth-last-of-type(10)::placeholder{
+display: none;
+}
+
+input p {
+    color: var(--color-blauw);
+}
 
 
 
@@ -92,7 +147,6 @@ header > ul {
 /* FOOTER */
 
 /* Socials Icons */
-
 footer{
 	margin-top:2em;
 	background-color:var(--color-red);
@@ -106,7 +160,6 @@ footer ul:first-of-type {
 
 footer ul:first-of-type li {
 	padding: 1em 1em 1em 1em;
-	
 }
 
 footer ul:first-of-type li a{
@@ -118,7 +171,16 @@ footer ul:nth-of-type(2) li {
 	display: flex;
 	justify-content: center;
 	padding:0.5em;
+
 }
+
+footer ul:nth-of-type(2) li a {
+color: var(--color-text);
+}
+
+footer ul:nth-of-type(2) li a:hover {
+    color: grey;
+    }
 
 /* Tekst onderaan p */
 footer > p {
@@ -126,6 +188,7 @@ footer > p {
 	text-transform: none;
 	font-size: smaller;
 	font-weight: 300;
+    color: var(--color-text);
 }
 
 /* Logo onderaan */
@@ -134,6 +197,10 @@ footer > a {
 	display: flex;
 	padding: 1em 0em 2em 1em;
 	justify-content: center;
+}
+
+footer > ul {
+    list-style: none;
 }
 
 /* NAAR BOVEN knop onderaan de pagina*/
@@ -160,4 +227,25 @@ body > a > button {
 	transform: translateY(1em);
 	transform: rotate(45deg);
 	background-color: transparent;
+}
+
+form > button {
+    padding-block:1em;
+    padding-inline:3em;
+}
+
+form > button  {
+    color: var(--color-text);
+    background-color: #007bff;
+    border-radius: none;
+}
+
+form > button:hover  {
+    color: #007bff;
+    background-color: #fbff00;
+    border-radius: none;
+    }
+
+form p:nth-of-type(3) {
+    color: rgb(77, 77, 77);
 }

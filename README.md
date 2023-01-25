@@ -149,9 +149,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
   - Meer tijd erin stoppen. Meer coderen.
-  - 
-  - 
-  - 
+  - meer
+  - meer
+  - meer coderen
 
 </details>
 
@@ -204,7 +204,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Images bij de artikelen hebben geen alt tekst. Die zijn nodig. Omschrijving van de links zijn goed. Alle headings zijn compleet en goed. Order is veranderd in CSS. Dat is netjes. Verder bij de socials in de footer laat hij de plaatjes niet zien maar leest hij ze wel voor. 
 
   Hier een omschrijving van hoe het opgelost kan worden (met indien nodig afbeeldingen)
-  Alt tekst toevoegen. 
+  Alt tekst toevoegen. (of aria labels)
 
   #### Muis en Toetsenbord 
   Bij het klikken op enter van het hamburger menu focust hij naar de social facebook bovenaan. Na de socials gaat hij wel netjes naar de volgende h2, dan de button etc. Bij de tweede artikel zit geen image. ook weer bij de socials onderaan laat hij de plaatjes niet zien, die zijn verborgen maar kan je er wel doorheen tabben. a:hover
@@ -238,7 +238,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-  Ik heb een andere website gekozen. Nu ben ik van carhartt-wip.com overgestapt naar de website van Stimorol.  
+  Ik heb een andere website gekozen. Nu ben ik van carhartt-wip.com overgestapt naar de website van Stimorol. Ik heb in 1 avond al meer opgeschoten dan dat ik de afgelopen paar weken aan de Carhartt website heb gezeten.
 
   ### Agenda voor meeting
   samen met je groepje opstellen
@@ -252,7 +252,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
-  - punt 1
+  - hamburger menu is goed geworden
   - punt 2
   - nog een punt
 
@@ -268,17 +268,19 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/index1.jpeg" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/contactsc1.jpg" width="375px" alt="contact"> 
+  <img src="readme-images/contact1.jpeg" width="375px" alt="contact"> 
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
-
+  Goed: flexbox, grid ging ook wel goed op het eind. Stylen van dingen
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  - Grid niet helemaal lekker bij responsiveness. De form is ook niet helemaal gelukt naar behoren. Animeren kwam ik ook niet helemaal goed uit.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
