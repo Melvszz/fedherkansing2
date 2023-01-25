@@ -275,14 +275,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatjes
-  Goed: flexbox, grid ging ook wel goed op het eind. Stylen van dingen
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  Goed: flexbox, grid ging ook wel goed op het eind. Stylen van dingen ging goed. Ik heb geleerd om een website responsive te maken door behulp van flexbox, grids en media queries. Ook heb ik geleerd dat de website gebruiksvriendelijker is voor mensen die beperkt zijn.
 
 
   ### Dit was lastig/Is niet gelukt:
   - Grid niet helemaal lekker bij responsiveness. De form is ook niet helemaal gelukt naar behoren. Animeren kwam ik ook niet helemaal goed uit.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
 </details>
 
 
