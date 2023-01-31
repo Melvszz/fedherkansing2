@@ -157,69 +157,48 @@ main li {
 
 /* Eerste sectie onderaan de header */
 main section:nth-of-type(1) {
+	position: relative;
 	display:grid;
-	grid-template-columns: 20% 20% 20% 20% 20%;
-	grid-template-rows: 20% 20% 20% 20% 20%;
-	padding-top:3em;
+	justify-items:center;
+
+	padding:3em;
+
+	background-image:url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
+	background-position:center center;
+	background-size:cover;
+
+	background-color: green;
 }
 
 main section:nth-of-type(1) h2 {
-	grid-row-start: 1;
-	grid-column-start: 3;
+	max-width:20em;
 	text-align:center;
-	font-weight:bold;
-	order:1;
-	font-size:x-large;
-	align-self: end;
+	font-size:1.5em;
 }
 
-main section:nth-of-type(1) h3 {
-	text-align:center;
-	font-size:xx-large;
-	order:2;
-	grid-row-start:2;
-	grid-row-end:3;
-	grid-column-start:2;
-	grid-column-end:5;
-
+main section:nth-of-type(1) h2 strong {
+	display:block;
+	font-size:calc(40/24 * 1em);
 }
 
-main section:nth-of-type(1) > svg {
-	order:4;
-	align-items:center;
-	grid-row-start:4;
-	grid-row-end:5;
-	grid-column-start:2;
-	grid-column-end:5;
-
-}
-
-main section:nth-of-type(1) > button:nth-of-type(1) {
-	grid-row-start:3;
-	grid-column-start:3;
-	justify-self: center;
+main section:nth-of-type(1) > a {
 	width: 8em;
 	margin-block: 2em;
 }
 
-main section:nth-of-type(1) > button:nth-of-type(1) a {
-}
-
 /* Button tussen twee secties */
-main section:nth-of-type(1) > button:nth-of-type(2) {
-	grid-row-start:5;
-	grid-column-start:3;
-	justify-self: center;
+main section:nth-of-type(1) > button {
+	position:absolute;
+	bottom:-2em;
 	height: 4em;
 	width: 4em;
-	transform: translateY(8em);
+	border:none;
 	border-radius: 100%;
 	border-color: var(--color-background);
-	
 }
-/* Arrow in the beneden knop */
-section:nth-of-type(1) > button:last-of-type > span{
 
+/* Arrow in the beneden knop */
+section:nth-of-type(1) > button span{
 	height:1em;
    	width:1em;
 	display: inline-block;
@@ -232,6 +211,36 @@ section:nth-of-type(1) > button:last-of-type > span{
 	transform: rotate(225deg);
 	background-color: transparent;
 }
+
+
+@media (min-width:48em) {
+	main section:nth-of-type(1) {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:max-content 1fr;
+		justify-items:start;
+		align-content: center;
+	}
+
+	main section:nth-of-type(1) h2 {
+		text-align: left;
+	}
+
+	main section:nth-of-type(1) img {
+		grid-row-start: 1;
+		grid-row-end: 3;
+		grid-column-start: 2;
+
+		place-self: center;
+		width:100%;
+		height:100%;
+		object-fit: contain;
+	}
+}
+
+
+
+
+
 
 /*  Tweede sectie, blauw */
 main section:nth-of-type(2) {
@@ -275,11 +284,7 @@ main section:nth-of-type(2) img{
 }
 
 /* Responsive background red */
-section:first-of-type{
-	background-image:url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
-	background-position:center center;
-	background-size:cover;
-}
+
 
 main section:first-of-type nav{
 	visibility:hidden;
