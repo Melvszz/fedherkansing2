@@ -1,6 +1,6 @@
 // JavaScript Document
 const deMenuButton = document.querySelector("header > button");
-const deNav = document.querySelector("section > nav");
+const deNav = document.querySelector("header > nav");
 // const deSluitButton = document.querySelector("header nav button");
 
 deMenuButton.addEventListener("click", toggleMenu);
