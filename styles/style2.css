@@ -156,6 +156,24 @@ form p:nth-of-type(3) {
     color: rgb(77, 77, 77);
 }
 
+form > section:nth-of-type(1) {
+    padding-bottom:1em;
+}
+
+form > section:nth-of-type(2) {
+    padding-bottom:1em;
+
+}
+
+form > section:nth-of-type(3) {
+    padding-bottom:1em;
+
+}
+
+form section:nth-of-type(2) label:last-of-type{
+    align-self:start;
+}
+
 /* Zend button */
 form section:last-of-type button {
     width:8em;
@@ -192,6 +210,7 @@ textarea{
     padding-top:.5em;
     padding-left: 1em;
     height: 10em;
+    margin-top:1em;
 }
 
 /* INPUTS */
@@ -199,6 +218,12 @@ input{
     padding:1em;
     padding-inline:1em;
 }
+
+input[type=number] {
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+    margin: 0;
+  }
 
 input:nth-last-of-type(6){
     color: var(--color-blauw);
