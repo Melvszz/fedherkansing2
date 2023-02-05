@@ -7,19 +7,28 @@
     font-family: 'barlow', sans-serif;
     font-size: 18px;
     font-weight: 700;
-    text-transform: uppercase;
     color: var(--color-blauw);
   }
   
   button, summary {
-      cursor: pointer;
+    color: var(--color-text);
+    background-color: #166d16;
+    cursor: pointer;
+    border: none;
+  }
+
+  a {
+    color: #007bff;
   }
   
   a:hover {
       text-decoration: underline;
+      cursor: pointer;
   }
-  
-  
+
+
+
+
   
   /*********************/
   /* CUSTOM PROPERTIES */
@@ -50,6 +59,27 @@
       margin:0;
   }
   
+  main {
+    padding-bottom: 5em;
+  }
+  
+  strong {
+    color: var(--color-red);
+  }
+
+  main > section {
+    padding-inline:3em;
+    padding-block:3em;
+
+  }
+
+  form{
+    background-color: #f1f1f1;
+    padding-inline:3em;
+    padding-top:3em;
+    padding-bottom:8em;
+  }
+
   /* HEADER */
 
   /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -103,6 +133,42 @@ form > h2{
     font-size:2em;
 }
 
+
+form > button {
+    padding-block:1em;
+    padding-inline:3em;
+    background: #007bff;
+}
+
+form > button  {
+    color: var(--color-text);
+    background-color: #007bff;
+    border-radius: none;
+}
+
+form > button:hover  {
+    color: #007bff;
+    background-color: #fbff00;
+    border-radius: none;
+    }
+
+form p:nth-of-type(3) {
+    color: rgb(77, 77, 77);
+}
+
+/* Zend button */
+form section:last-of-type button {
+    width:8em;
+    height:3em;
+    float: right;
+    }
+
+form section:last-of-type button:hover {
+background-color: var(--color-blauw);
+color: var(--color-text);
+border-color:var(--color-text)
+}
+
 option {
     color:var(--color-blauw);
 }
@@ -122,10 +188,16 @@ label {
     padding-top:2em;
 }
 
+textarea{
+    padding-top:.5em;
+    padding-left: 1em;
+    height: 10em;
+}
+
+/* INPUTS */
 input{
     padding:1em;
     padding-inline:1em;
-    width:21em;
 }
 
 input:nth-last-of-type(6){
@@ -143,7 +215,6 @@ display: none;
 input p {
     color: var(--color-blauw);
 }
-
 
 @media (min-width:40em) {
     form section:nth-of-type(1) {
@@ -172,12 +243,26 @@ input p {
         width: 100%
     }
 
+    form section:nth-of-type(3)  {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: 1em;
+    }
+
+    form section:nth-of-type(4)  {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        column-gap: 1em;
+    }
 }
 
 
 
-/* FOOTER */
 
+
+/* FOOTER */
 /* Socials Icons */
 footer{
 	margin-top:2em;
@@ -212,7 +297,7 @@ color: var(--color-text);
 
 footer ul:nth-of-type(2) li a:hover {
     color: grey;
-    }
+}
 
 /* Tekst onderaan p */
 footer > p {
@@ -261,23 +346,7 @@ body > a > button {
 	background-color: transparent;
 }
 
-form > button {
-    padding-block:1em;
-    padding-inline:3em;
-}
-
-form > button  {
-    color: var(--color-text);
-    background-color: #007bff;
-    border-radius: none;
-}
-
-form > button:hover  {
-    color: #007bff;
-    background-color: #fbff00;
-    border-radius: none;
-    }
-
-form p:nth-of-type(3) {
-    color: rgb(77, 77, 77);
+body > a:hover {
+    background-color: var(--color-blauw);
+    color: var(--color-blauw);
 }

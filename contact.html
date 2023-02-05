@@ -27,7 +27,7 @@
             <h2>Contact</h2>
             <p>Gebruik dit formulier voor al uw vragen of verzoeken.</p>
             <p>Voor vragen kunt u telefonisch contact opnemen via 0900-4902902 (0,10 EUR/min) of via onderstaand contactformulier.</p>
-			<p>Verplichte velden zijn aangeduid met *</p>
+			<p><strong>Verplichte</strong> velden zijn aangeduid met <strong>*</strong></p>
 
 			<section>
 				<label>Maak uw keuze</label>
@@ -57,40 +57,58 @@
 			<section>
 				<label>Voornaam</label>
 				<input type="text" name="Voornaam" placeholder="Uw voornaam hier">
+
 				<label>Achternaam</label>
 				<input type="text" name="achternaam" placeholder="Uw achternaam hier">
-				<label>E-mail</label>
-				<input type="email" name="email" placeholder="Uw E-mail hier">
+
+				<label>E-mail<strong>*</strong></label>
+				<input type="email" name="email" placeholder="Uw email hier">
+
 				<label>Huisnummer</label>
 				<input type="email" name="huisnummer" placeholder="Huisnummer">
+
 				<label>Straatnaam</label>
 				<input type="text" name="straatnaam" placeholder="Straatnaam">
+
 				<label>Woonplaats</label>
 				<input type="address" name="adres" placeholder="Uw adres hier">
+
 				<label>Postcode</label>
 				<input type="address" name="postcode" placeholder="Uw postcode hier">
+
 				<label>Telefoon</label>
 				<input type="tel" name="telefoon" placeholder="Uw telefoon hier">
+
 				<label>Uw bericht</label>
-				<input type="text" name="bericht" placeholder="Uw bericht hier">
+				<textarea type="text" name="bericht" placeholder="Uw bericht hier"></textarea>
 			</section>
 				
 			<section>
 				<label>Artikel/smaak</label>
-				<input type="text" name="artikel" placeholder="Uw artikel/smaak hier">
+				<select id="keuze" name="keuze">
+                    <option value="Oral-B Stimorol">Oral-B Stimorol</option>
+                    <option value="Ice Stimorol">Ice Stimorol</option>
+                    <option value="Stimorol Sticks">Stimorol Sticks</option>
+                    <option value="Stimorol pot">Stimorol pot</option>
+                    <option value="Stimorol Max">Stimorol Max</option>
+				</select>
 				<label>Lotcode - naast houdbaarheidsdatum te vinden</label>
-				<input type="text" name="lotcode" placeholder="Hier invullen graag">
+				<input type="text" name="lotcode" placeholder="37664">
+
 				<label>Streepjescode</label>
 				<input type="number" name="Streepjescode" placeholder="Streepjescode">
+
 				<label>houdbaarheidsdatum</label>
 				<input type="date" name="houdbaarheidsdatum">
+
 				<label>Productkenmerken (gewicht, formaat)</label>
-				<input type="text" name="productkenmerken" placeholder="vul hier in">
+				<input type="text" name="productkenmerken" placeholder="Vul hier in">
+
 				<label>Plaats van aankoop</label>
+				<input type="text" name="plaats van aankoop" placeholder="Vul hier in">
 			</section>
                 
 			<section>
-				<input type="text" name="plaats van aankoop" placeholder="Vul hier in">
 				<label>Bijlage 1</label>
 					<input type="file" name="bijlage 1" placeholder="Vul hier in">
 				<label>Bijlage 2</label>

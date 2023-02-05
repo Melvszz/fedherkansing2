@@ -19,6 +19,9 @@ a:hover {
 	text-decoration:underline;
 }
 
+a:visited {
+}
+
 
 
 /*********************/
@@ -27,7 +30,6 @@ a:hover {
 :root {
 	/* startje */
 	--color-text:#ffffff;
-	--color-background:#eee;
 	--color-red:#e30714;
 	--color-blauw:#273372;
 }
@@ -54,22 +56,8 @@ body{
 /* HEADER */
 
 header{
-	padding-bottom:.1em
-}
-
-header img {
-	position:absolute;
-	max-width:12em;
-	transform: translate(1em, 1em);
-	z-index:5;
-	
-}
-
-header li {
-	list-style:none;
-}
-
-header {
+	padding-bottom:.1em;
+	position:relative;
 	/* top:100%; */
 	background-color:var(--color-blauw);
 	/* padding:1em 2em 1em 2em; */
@@ -77,6 +65,18 @@ header {
 	z-index:50;
 	margin-top: -1em;
 	padding-top:1em;
+}
+
+header img {
+	position:absolute;
+	max-width:12em;
+	transform: translate(1em, 1em);
+	z-index:3;
+	
+}
+
+header li {
+	list-style:none;
 }
 
 header nav.open ul {
@@ -104,11 +104,23 @@ header > h1{
 	width:1px;
 }
 
+header > h1 > button {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
 header > ul {
 	display:flex;
 	justify-content:left;
 	gap:2em;
+	flex-wrap: nowrap;
 }
+
+header > ul > li {
+	max-width:19em;
+}
+
+
 
 /* HEADER SCHUIN hb menu */ 
 header >  button {
@@ -128,6 +140,10 @@ header >  button {
 	z-index: 200;
 }
 
+header >  button:hover {
+	color: rgb(63, 63, 63);
+}
+
 /* HAMBURGER ICON */
 header > button > ul {
 	display:grid;
@@ -137,7 +153,7 @@ header > button > ul {
 }
 
 header > button > ul > li {
-	height:.17em;
+	height:.20em;
 	width:1em;
 	background-color:var(--color-blauw);
 	grid-column-start:1;
@@ -165,6 +181,34 @@ header > button.open > ul > li:nth-of-type(3) {
 	transform:rotate(-45deg);
 }
 
+/* Responsive background red */
+header nav{
+	position: absolute;
+	visibility:hidden;
+}
+
+header nav.open {
+	width: 100%;
+	background-color:var(--color-blauw);
+	background-image: url(/images/navi-bg.png);
+	float:bottom;
+}
+
+/* Hamburger menu als hij open geklapt is */
+header nav.open {
+	visibility: visible;
+	text-align: center;
+	padding-top: 10em;
+	padding-bottom: 10em;
+	justify-content: space-between;
+	z-index: 100;
+	transform: translateY(-3em);
+	transition: 50ms;
+	
+
+}
+
+
 
 
 
@@ -184,7 +228,6 @@ main section:nth-of-type(1) {
 	background-image:url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
 	background-position:center center;
 	background-size:cover;
-	background-color: green;
 }
 
 main section:nth-of-type(1) h2 {
@@ -207,6 +250,13 @@ main section:nth-of-type(1) > a {
 	margin-block: 2em;
 	color: var(--color-blauw);
 	background-color: var(--color-text);
+	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
+}
+
+main section:nth-of-type(1) > a:hover {
+	color: var(--color-text);
+	background-color: var(--color-blauw);
+
 }
 
 /* Button tussen twee secties */
@@ -263,11 +313,16 @@ section:nth-of-type(1) > button span{
 	main section:nth-of-type(1) > button {
 		left: 50%;
 	}
+	header > ul {
+		justify-content: flex-end;
+		padding-right:3em
+	}
+	
 }
 
 @media (min-width:82.5em) {
 	main section:nth-of-type(1) h2 {
-		font-size: 3em;
+		font-size: 2.5em;
 	}
 }
 
@@ -281,7 +336,7 @@ main section:nth-of-type(2) {
 	position: relative;
 	display:grid;
 	justify-items:center;
-	padding-block:6em;
+	padding:6em;
 }
 main section:nth-of-type(2) img {
 	max-width:15em;
@@ -299,14 +354,23 @@ main section:nth-of-type(2) h2 strong {
 }
 
 main section:nth-of-type(2) > a {
-	display: block;
-	text-align: center;
-	width: 9em;
+	display: flex;
+	flex-wrap: nowrap; 
+	align-items: center;
+	justify-content: center;
+	width: 16em;
 	height: 3em;
 	margin-block: 2em;
 	color: var(--color-blauw);
 	background-color: var(--color-text);
-	font-size: .9em;
+	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
+	
+}
+
+main section:nth-of-type(2) > a:hover {
+	color: var(--color-text);
+	background-color: var(--color-red);
+
 }
 
 main section:nth-of-type(2) h2 {
@@ -320,16 +384,7 @@ main section:nth-of-type(2) h2 strong {
 	font-size:calc(40/24 * 1em);
 }
 
-main section:nth-of-type(2) > a {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 9em;
-	height: 3em;
-	margin-block: 2em;
-	color: var(--color-blauw);
-	background-color: var(--color-text);
-}
+
 
 @media (min-width:48em) {
 	main section:nth-of-type(2) {
@@ -337,7 +392,7 @@ main section:nth-of-type(2) > a {
 		grid-template-rows:max-content 1fr;
 		justify-items:start;
 		align-content: center;
-		padding-left:1em;
+		padding:6em
 	}
 
 	main section:nth-of-type(2) h2 {
@@ -353,33 +408,6 @@ main section:nth-of-type(2) > a {
 		height:100%;
 		object-fit: contain;
 	}
-}
-
-/* Responsive background red */
-header nav{
-	position: absolute;
-	visibility:hidden;
-}
-
-header nav.open {
-	width: 100%;
-	background-color:var(--color-blauw);
-	background-image: url(/images/navi-bg.png);
-	float:bottom;
-}
-
-/* Hamburger menu als hij open geklapt is */
-header nav.open {
-	visibility: visible;
-	text-align: center;
-	padding-top: 10em;
-	padding-bottom: 10em;
-	justify-content: space-between;
-	z-index: 100;
-	transform: translateY(-3em);
-	transition: 50ms;
-	
-
 }
 
 body section:last-of-type {
@@ -403,44 +431,60 @@ section:nth-last-of-type(1) > h2 {
 /* CONTAINER list artikelen */
 section:nth-last-of-type(1) > ul {
 	display:grid;
-	/* grid-template-columns:  repeat(3, 1fr); */
 	margin:0 0.3em 0 0.3em;
 	gap:0.5em;
 	padding: 0;
 }
 
 
-
 /* BLOKJE boven artikel */
 section:nth-last-of-type(1) ul li{
 	background-color:var(--color-red);
-		display:grid;
+	display:grid;
 
 }
 
 /* TITEL artikel */
 main > section:nth-last-of-type(1)  ul li h3 {
-	font-size: 2em;
+	font-size: 2.5em;
 	color: var(--color-text);
 	text-align: center;
 	order:2;
+	padding-top:.5em;
 }
 
 /* KAUWGOM tekst boven artikel */
 main > section:nth-last-of-type(1) ul li h4 {
+	background-image: linear-gradient(110deg, transparent 6.7em, #e30714 .7em);
 	padding: .5em 2em .5em .5em;
 	position: absolute;
 	background-color: var(--color-blauw);
 	float: left;
 	float: top;
-	transform: translateY(-1.35em);
+	transform: translateY(-1.3339em);
 	order:1;
 }
-
 main > section:nth-last-of-type(1) ul li a {
 	order:3;
 }
 
+/* zorgt ervoor dat de image downscaled, maar nooit groter dan zijn orginele formaat */
+main > section:nth-last-of-type(1) img {
+	max-width: 50%;
+  	height: auto;
+}
+
+@media (min-width:48em) {
+	section:nth-last-of-type(1) > ul {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	body > a:last-of-type {
+		position: relative;
+		/* transform: translateX(30em); */
+		
+	}
+}
 
 /* FOOTER */
 
@@ -449,6 +493,13 @@ main > section:nth-last-of-type(1) ul li a {
 footer{
 	margin-top:2em;
 	background-color:var(--color-red);
+}
+
+/* Logo onderaan */
+footer > a {
+	display: flex;
+	padding: 1em 0em 2em 1em;
+	justify-content: center;
 }
 
 footer ul:first-of-type {
@@ -462,7 +513,6 @@ footer ul:first-of-type li {
 	
 }
 
-
 /* Links in de footer */
 footer ul:nth-of-type(2) li {
 	display: flex;
@@ -474,7 +524,7 @@ footer ul:nth-of-type(2) li {
 footer > p {
 	text-align: center;
 	text-transform: none;
-	font-size: smaller;
+	font-size: 1em;
 	font-weight: 300;
 }
 
@@ -485,14 +535,6 @@ footer > ul {
 footer > ul li a:hover {
 	color: #273372;
 	text-decoration: underline;
-}
-
-/* Logo onderaan */
-
-footer > a {
-	display: flex;
-	padding: 1em 0em 2em 1em;
-	justify-content: center;
 }
 
 /* NAAR BOVEN knop onderaan de pagina*/
@@ -520,18 +562,6 @@ a:last-of-type > button {
 	transform: rotate(45deg);
 	background-color: transparent;
 }
-
-
-
-
-
-
-/* OVERIGE */
-button a{
-	color: var(--color-blauw);
-	font-size: smaller;
-}
-
 
  /* Zo gedaan zodat hij niet groter wordt dan de containers */
 main section:nth-of-type(3) img {
