@@ -52,26 +52,26 @@
   /* whitespace top weghalen */
   ul {
       margin:auto;
-  }
+}
   
   /* neemt hele pagina in beslag, ook randjes */
   body{
       margin:0;
-  }
+}
   
   main {
     padding-bottom: 5em;
-  }
+}
   
   strong {
     color: var(--color-red);
-  }
+}
 
   main > section {
     padding-inline:3em;
     padding-block:3em;
 
-  }
+}
 
 /* HEADER */
 header{
@@ -111,13 +111,10 @@ header nav.open {
 	transform: translateY(-3em);
 	transition: 50ms;
 }
-header nav.open {
-	width: 100%;
-	background-color:var(--color-blauw);
-	background-image: url(/images/navi-bg.png);
-	float:bottom;
-}
 
+header nav.open {
+
+}
 
 header nav.open ul {
 	display: flex;
@@ -158,7 +155,6 @@ header > ul {
 header > ul > li {
 	max-width:19em;
 }
-
 
 
 
@@ -208,6 +204,7 @@ header > button > ul > li {
 header > button > ul > li:nth-of-type(1) {
 	transform:translateY(-.33em);
 }
+
 header > button > ul > li:nth-of-type(3) {
 	transform:translateY(.33em);
 }
@@ -216,11 +213,21 @@ header > button > ul > li:nth-of-type(3) {
 header > button.open > ul > li:nth-of-type(1) {
 	transform:rotate(45deg);
 }
+
 header > button.open > ul > li:nth-of-type(2) {
 	transform:scaleX(0);
 }
+
 header > button.open > ul > li:nth-of-type(3) {
 	transform:rotate(-45deg);
+}
+
+
+@media (min-width:48em) {
+	header > ul {
+		justify-content: flex-end;
+		padding-right:3em;
+	}
 }
 
 
@@ -228,7 +235,7 @@ header > button.open > ul > li:nth-of-type(3) {
 
 
 /* MAIN */
-form{
+form {
     background-color: #f1f1f1;
     padding-inline:2em;
     padding-block:2em;
@@ -269,8 +276,17 @@ form > section:nth-of-type(2) {
     padding-bottom:1em;
 }
 
+/* deze section is standaard verborgen */
 form > section:nth-of-type(3) {
     padding-bottom:1em;
+    display:none;
+}
+
+/* als voor Product wordt gekozen wordt de section getoond */
+/* hiervoor wordt met JS naar de waarde van de select gekeken */
+/* daarvoor heb ik een contact.js gemaakt - */
+form[data-keuze="Product"] > section:nth-of-type(3) {
+    display:block;
 }
 
 form section:nth-of-type(2) label:last-of-type{
@@ -308,6 +324,11 @@ input:nth-last-of-type(10)::placeholder{
 display: none;
 }
 
+input {
+    display: flex;
+    width: 100%;
+}
+
 input p {
     color: var(--color-blauw);
 }
@@ -323,12 +344,17 @@ option {
 }
 
 select {
-    color:var(--color-blauw)
+    color:var(--color-blauw);
 }
 
 select#keuze {
     padding:.8em;
     padding-inline:.9em ;
+    width: 100%;
+}
+
+select#keuze:hover {
+    color: #007bff;
 }
 
 section > form > section:last-of-type > p > a {
@@ -340,6 +366,7 @@ textarea{
     padding-left: 1em;
     height: 10em;
     margin-top:1em;
+    width: 100%;
 }
 
 
@@ -370,7 +397,8 @@ textarea{
         width: 100%
     }
 
-    form section:nth-of-type(3)  {
+    /* ook hier checken of productgekozen is */
+    form[data-keuze="Product"] section:nth-of-type(3)  {
         display:grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;

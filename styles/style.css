@@ -19,8 +19,7 @@ a:hover {
 	text-decoration:underline;
 }
 
-a:visited {
-}
+
 
 
 
@@ -92,13 +91,13 @@ header nav.open {
 	transform: translateY(-3em);
 	transition: 50ms;
 }
+
 header nav.open {
 	width: 100%;
 	background-color:var(--color-blauw);
 	background-image: url(/images/navi-bg.png);
 	float:bottom;
 }
-
 
 header nav.open ul {
 	display: flex;
@@ -112,7 +111,6 @@ header nav.open ul li a {
 }
 
 /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
-
 header > h1{
 	clip:rect(0 0 0 0);
 	clip-path:inset(50%);
@@ -209,6 +207,7 @@ header > button.open > ul > li:nth-of-type(3) {
 
 
 
+
 /* MAIN */
 main li {
 	list-style:none;
@@ -219,10 +218,17 @@ main section:nth-of-type(1) {
 	position: relative;
 	display:grid;
 	justify-items:center;
-	padding:6em;
+	padding-block:6em;
+	padding-inline:3em;
 	background-image:url("https://www.stimorol.nl/~/media/stimorol/nl2019/Images/home/red-background-star");
 	background-position:center center;
 	background-size:cover;
+}
+
+main section:nth-of-type(1) img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 main section:nth-of-type(1) h2 {
@@ -281,7 +287,7 @@ section:nth-of-type(1) > button span{
 }
 
  
-@media  {
+@media (min-width:48em)  {
 	main section:nth-of-type(1) {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows:max-content 1fr;
@@ -317,18 +323,18 @@ section:nth-of-type(1) > button span{
 
 
 
-
-
 /*  Tweede sectie, blauw */
 main section:nth-of-type(2) {
-	position: relative;
+	position:relative;
 	display:grid;
 	justify-items:center;
-	padding:6em;
+	padding:2em;
 }
 
 main section:nth-of-type(2) img {
-	max-width:15em;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 main section:nth-of-type(2) h2 {
@@ -405,6 +411,7 @@ body section:last-of-type {
 }
 
 
+
 /* ARTIKELEN STIMOROL */
 
 /* h2 - ONTDEK ALLE PRODUCTEN */
@@ -433,8 +440,9 @@ section:nth-last-of-type(1) ul li{
 
  /* Zo gedaan zodat hij niet groter wordt dan de containers */
 section:nth-of-type(3) img {
-	max-width: 100%;
-	height: auto;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 /* TITEL artikel */
@@ -498,7 +506,6 @@ footer ul:first-of-type {
 
 footer ul:first-of-type li {
 	padding: 1em 1em 1em 1em;
-	
 }
 
 /* Links in de footer */

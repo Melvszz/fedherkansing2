@@ -51,114 +51,115 @@
 	
 <main>
 	<section>
-        <form>
-            <h2>Contact</h2>
-            <p>Gebruik dit formulier voor al uw vragen of verzoeken.</p>
-            <p>Voor vragen kunt u telefonisch contact opnemen via 0900-4902902 (0,10 EUR/min) of via onderstaand contactformulier.</p>
-			<p><strong>Verplichte</strong> velden zijn aangeduid met <strong>*</strong></p>
+			<form>
+				<h2>Contact</h2>
+				<p>Gebruik dit formulier voor al uw vragen of verzoeken.</p>
+				<p>Voor vragen kunt u telefonisch contact opnemen via 0900-4902902 (0,10 EUR/min) of via onderstaand contactformulier.</p>
+				<p><strong>Verplichte</strong> velden zijn aangeduid met <strong>*</strong></p>
 
-			<section>
-				<label>Maak uw keuze</label>
-                <select id="keuze" name="keuze">
-                    <option value="Product">Product</option>
-                    <option value="Advertentie">Advertentie</option>
-                    <option value="Website">Website</option>
-                    <option value="Bedrijf">Bedrijf</option>
-                    <option value="Uitschrijven">Uitschrijven</option>
-                    <option value="Bescherming van Persoonsgegevens">Bescherming van Persoonsgegevens</option>
-				</select>
-				
-                <label>Maak uw keuze</label>
-                <select id="keuze" name="keuze2">
-                    <option value="Aanbeveling">Aanbeveling</option>
-                    <option value="Vraag">Vraag</option>
-                    <option value="Verzoek">Verzoek</option>
-                    <option value="Suggestie">Suggestie</option>
-                    <option value="Voedingswaarde">Voedingswaarde</option>
-                    <option value="Promotie">Promotie</option>
-					<option value="Klacht">Klacht</option>
-					<option value="Uitschijven">Uitschijven</option>
-					<option value="Vraag over beveiliging van gegevens">Vraag over beveiliging van gegevens</option>
-				</select>
-			</section>
+				<section>
+					<label>Maak uw keuze</label>
+					<select id="keuze" name="keuze">
+						<!-- met selected wordt bepaald welke optie standaard geselecteerd is  -->
+						<option value="Product" selected>Product</option>
+						<option value="Advertentie">Advertentie</option>
+						<option value="Website">Website</option>
+						<option value="Bedrijf">Bedrijf</option>
+						<option value="Uitschrijven">Uitschrijven</option>
+						<option value="Bescherming van Persoonsgegevens">Bescherming van Persoonsgegevens</option>
+					</select>
+			
+					<label>Maak uw keuze</label>
+					<select id="keuze" name="keuze2">
+						<option value="Aanbeveling">Aanbeveling</option>
+						<option value="Vraag">Vraag</option>
+						<option value="Verzoek">Verzoek</option>
+						<option value="Suggestie">Suggestie</option>
+						<option value="Voedingswaarde">Voedingswaarde</option>
+						<option value="Promotie">Promotie</option>
+						<option value="Klacht">Klacht</option>
+						<option value="Uitschijven">Uitschijven</option>
+						<option value="Vraag over beveiliging van gegevens">Vraag over beveiliging van gegevens</option>
+					</select>
+				</section>
 
-			<section>
-				<label>Voornaam</label>
-				<input type="text" name="Voornaam" placeholder="Uw voornaam hier">
+				<section>
+					<label>Voornaam</label>
+					<input type="text" name="Voornaam" placeholder="Uw voornaam hier">
 
-				<label>Achternaam</label>
-				<input type="text" name="achternaam" placeholder="Uw achternaam hier">
+					<label>Achternaam</label>
+					<input type="text" name="achternaam" placeholder="Uw achternaam hier">
 
-				<label>E-mail<strong>*</strong></label>
-				<input type="email" name="email" placeholder="Uw email hier">
+					<label>E-mail<strong>*</strong></label>
+					<input type="email" name="email" placeholder="Uw email hier">
 
-				<label>Huisnummer</label>
-				<input type="email" name="huisnummer" placeholder="Huisnummer">
+					<label>Huisnummer</label>
+					<input type="email" name="huisnummer" placeholder="Huisnummer">
 
-				<label>Straatnaam</label>
-				<input type="text" name="straatnaam" placeholder="Straatnaam">
+					<label>Straatnaam</label>
+					<input type="text" name="straatnaam" placeholder="Straatnaam">
 
-				<label>Woonplaats</label>
-				<input type="address" name="adres" placeholder="Uw adres hier">
+					<label>Woonplaats</label>
+					<input type="address" name="adres" placeholder="Uw adres hier">
 
-				<label>Postcode</label>
-				<input type="address" name="postcode" placeholder="Uw postcode hier">
+					<label>Postcode</label>
+					<input type="address" name="postcode" placeholder="Uw postcode hier">
 
-				<label>Telefoon</label>
-				<input type="tel" name="telefoon" placeholder="Uw telefoon hier">
+					<label>Telefoon</label>
+					<input type="tel" name="telefoon" placeholder="Uw telefoon hier">
 
-				<label>Uw bericht</label>
-				<textarea type="text" name="bericht" placeholder="Uw bericht hier"></textarea>
-			</section>
-				
-			<section>
-				<label>Artikel/smaak</label>
-				<select id="keuze" name="keuze">
-                    <option value="Oral-B Stimorol">Oral-B Stimorol</option>
-                    <option value="Ice Stimorol">Ice Stimorol</option>
-                    <option value="Stimorol Sticks">Stimorol Sticks</option>
-                    <option value="Stimorol pot">Stimorol pot</option>
-                    <option value="Stimorol Max">Stimorol Max</option>
-				</select>
-				<label>Lotcode - naast houdbaarheidsdatum te vinden</label>
-				<input type="text" name="lotcode" placeholder="37664">
+					<label>Uw bericht</label>
+					<textarea type="text" name="bericht" placeholder="Uw bericht hier"></textarea>
+				</section>
+					
+				<section>
+					<label>Artikel/smaak</label>
+					<select id="keuze" name="keuze">
+						<option value="Oral-B Stimorol">Oral-B Stimorol</option>
+						<option value="Ice Stimorol">Ice Stimorol</option>
+						<option value="Stimorol Sticks">Stimorol Sticks</option>
+						<option value="Stimorol pot">Stimorol pot</option>
+						<option value="Stimorol Max">Stimorol Max</option>
+					</select>
+					<label>Lotcode - naast houdbaarheidsdatum te vinden</label>
+					<input type="text" name="lotcode" placeholder="37664">
 
-				<label>Streepjescode</label>
-				<input type="number" name="Streepjescode" placeholder="Streepjescode">
+					<label>Streepjescode</label>
+					<input type="number" name="Streepjescode" placeholder="Streepjescode">
 
-				<label>houdbaarheidsdatum</label>
-				<input type="date" name="houdbaarheidsdatum">
+					<label>houdbaarheidsdatum</label>
+					<input type="date" name="houdbaarheidsdatum">
 
-				<label>Productkenmerken (gewicht, formaat)</label>
-				<input type="text" name="productkenmerken" placeholder="Vul hier in">
+					<label>Productkenmerken (gewicht, formaat)</label>
+					<input type="text" name="productkenmerken" placeholder="Vul hier in">
 
-				<label>Plaats van aankoop</label>
-				<input type="text" name="plaats van aankoop" placeholder="Vul hier in">
-			</section>
-                
-			<section>
-				<label>Bijlage 1</label>
-					<input type="file" name="bijlage 1" placeholder="Vul hier in">
-				<label>Bijlage 2</label>
-					<input type="file" name="bijlage 2" placeholder="Vul hier in">
-				<label>Bijlage 3</label>
-					<input type="file" name="bijlage 3" placeholder="Vul hier in">
-			</section>
+					<label>Plaats van aankoop</label>
+					<input type="text" name="plaats van aankoop" placeholder="Vul hier in">
+				</section>
+									
+				<section>
+					<label>Bijlage 1</label>
+						<input type="file" name="bijlage 1" placeholder="Vul hier in">
+					<label>Bijlage 2</label>
+						<input type="file" name="bijlage 2" placeholder="Vul hier in">
+					<label>Bijlage 3</label>
+						<input type="file" name="bijlage 3" placeholder="Vul hier in">
+				</section>
 
-			<section>
-				<p>Wij waarderen uw vertrouwen dat u uw persoonsgegevens met ons wil delen. Wij zullen altijd uw persoonsgegevens met respect gebruiken en vertrouwelijk behandelen en alleen gebruiken voor het aangegeven beperkte doel zoals hierboven beschreven. Als u meer wil weten over hoe wij met uw persoonsgegevens omgaan, lees dan onze <a href="#">Privacyverklaring</a>.</p>
+				<section>
+					<p>Wij waarderen uw vertrouwen dat u uw persoonsgegevens met ons wil delen. Wij zullen altijd uw persoonsgegevens met respect gebruiken en vertrouwelijk behandelen en alleen gebruiken voor het aangegeven beperkte doel zoals hierboven beschreven. Als u meer wil weten over hoe wij met uw persoonsgegevens omgaan, lees dan onze <a href="#">Privacyverklaring</a>.</p>
 
-				<button type="submit">Zenden</button>
-			</section>
-        </form>
-    </section>
+					<button type="submit">Zenden</button>
+				</section>
+			</form>
+	</section>
 </main>
 
 <footer>
 	<ul>
-		<li><a href="#"><img a src="/images/fbicon2.jpg" alt=""></a></li>
-		<li><a href="#"><img a src="/images/yticon2.jpg" alt=""></a></li>
-		<li><a href="#"><img a src="/images/igicon2.jpg" alt=""></a></li>
+		<li><a href="#"><img a src="/images/fbicon2.jpg" alt="Facebook"></a></li>
+		<li><a href="#"><img a src="/images/yticon2.jpg" alt="YouTube"></a></li>
+		<li><a href="#"><img a src="/images/igicon2.jpg" alt="Instagram"></a></li>
 	</ul>
 	<ul>
 		<li><a href="#">Contact</a></li>
@@ -174,5 +175,6 @@
 </footer>
 	<a href="#"><button type="button"></button>Naar boven</a>
 		<script defer src="scripts/script.js"></script>	
+		<script defer src="scripts/contact.js"></script>	
 </body>
 </html>
