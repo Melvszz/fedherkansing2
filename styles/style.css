@@ -58,9 +58,7 @@ body{
 header{
 	padding-bottom:.1em;
 	position:relative;
-	/* top:100%; */
 	background-color:var(--color-blauw);
-	/* padding:1em 2em 1em 2em; */
 	position:relative;
 	z-index:50;
 	margin-top: -1em;
@@ -72,24 +70,45 @@ header img {
 	max-width:12em;
 	transform: translate(1em, 1em);
 	z-index:3;
-	
 }
 
 header li {
 	list-style:none;
 }
 
+header nav{
+	position: absolute;
+	visibility:hidden;
+}
+
+/* Hamburger menu als hij open geklapt is */
+header nav.open {
+	visibility: visible;
+	text-align: center;
+	padding-top: 10em;
+	padding-bottom: 10em;
+	justify-content: space-between;
+	z-index: 100;
+	transform: translateY(-3em);
+	transition: 50ms;
+}
+header nav.open {
+	width: 100%;
+	background-color:var(--color-blauw);
+	background-image: url(/images/navi-bg.png);
+	float:bottom;
+}
+
+
 header nav.open ul {
 	display: flex;
 	flex-direction: column;
 	gap:1em;
-
 }
 
 header nav.open ul li a {
 	font-size:2em;
 	cursor:pointer;
-
 }
 
 /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -114,13 +133,12 @@ header > ul {
 	justify-content:left;
 	gap:2em;
 	flex-wrap: nowrap;
+	z-index: 101;
 }
 
 header > ul > li {
 	max-width:19em;
 }
-
-
 
 /* HEADER SCHUIN hb menu */ 
 header >  button {
@@ -140,7 +158,7 @@ header >  button {
 	z-index: 200;
 }
 
-header >  button:hover {
+header > button:hover {
 	color: rgb(63, 63, 63);
 }
 
@@ -159,13 +177,13 @@ header > button > ul > li {
 	grid-column-start:1;
 	grid-row-start:1;
 	transition:.25s;
-	
 }
 
 /* hamburger menu gesloten */
 header > button > ul > li:nth-of-type(1) {
 	transform:translateY(-.33em);
 }
+
 header > button > ul > li:nth-of-type(3) {
 	transform:translateY(.33em);
 }
@@ -181,40 +199,17 @@ header > button.open > ul > li:nth-of-type(3) {
 	transform:rotate(-45deg);
 }
 
-/* Responsive background red */
-header nav{
-	position: absolute;
-	visibility:hidden;
+@media (min-width:48em) {
+	header > ul {
+		justify-content: flex-end;
+		padding-right:3em;
+	}
 }
-
-header nav.open {
-	width: 100%;
-	background-color:var(--color-blauw);
-	background-image: url(/images/navi-bg.png);
-	float:bottom;
-}
-
-/* Hamburger menu als hij open geklapt is */
-header nav.open {
-	visibility: visible;
-	text-align: center;
-	padding-top: 10em;
-	padding-bottom: 10em;
-	justify-content: space-between;
-	z-index: 100;
-	transform: translateY(-3em);
-	transition: 50ms;
-	
-
-}
-
-
 
 
 
 
 /* MAIN */
-
 main li {
 	list-style:none;
 }
@@ -256,7 +251,6 @@ main section:nth-of-type(1) > a {
 main section:nth-of-type(1) > a:hover {
 	color: var(--color-text);
 	background-color: var(--color-blauw);
-
 }
 
 /* Button tussen twee secties */
@@ -286,8 +280,8 @@ section:nth-of-type(1) > button span{
 	background-color: transparent;
 }
 
-
-@media (min-width:48em) {
+ 
+@media  {
 	main section:nth-of-type(1) {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows:max-content 1fr;
@@ -303,7 +297,6 @@ section:nth-of-type(1) > button span{
 		grid-row-start: 1;
 		grid-row-end: 3;
 		grid-column-start: 2;
-
 		place-self: center;
 		width:100%;
 		height:100%;
@@ -313,12 +306,8 @@ section:nth-of-type(1) > button span{
 	main section:nth-of-type(1) > button {
 		left: 50%;
 	}
-	header > ul {
-		justify-content: flex-end;
-		padding-right:3em
-	}
-	
 }
+
 
 @media (min-width:82.5em) {
 	main section:nth-of-type(1) h2 {
@@ -331,13 +320,13 @@ section:nth-of-type(1) > button span{
 
 
 /*  Tweede sectie, blauw */
-
 main section:nth-of-type(2) {
 	position: relative;
 	display:grid;
 	justify-items:center;
 	padding:6em;
 }
+
 main section:nth-of-type(2) img {
 	max-width:15em;
 }
@@ -364,13 +353,11 @@ main section:nth-of-type(2) > a {
 	color: var(--color-blauw);
 	background-color: var(--color-text);
 	box-shadow: 5px 5px 10px 0 rgb(0 0 0 / 25%);
-	
 }
 
 main section:nth-of-type(2) > a:hover {
 	color: var(--color-text);
 	background-color: var(--color-red);
-
 }
 
 main section:nth-of-type(2) h2 {
@@ -384,6 +371,13 @@ main section:nth-of-type(2) h2 strong {
 	font-size:calc(40/24 * 1em);
 }
 
+section:nth-last-of-type(2) {
+	background-color:var(--color-blauw);
+}
+
+body section:last-of-type {
+	background-color: var(--color-background);
+}
 
 
 @media (min-width:48em) {
@@ -392,7 +386,7 @@ main section:nth-of-type(2) h2 strong {
 		grid-template-rows:max-content 1fr;
 		justify-items:start;
 		align-content: center;
-		padding:6em
+		padding:6em;
 	}
 
 	main section:nth-of-type(2) h2 {
@@ -410,12 +404,6 @@ main section:nth-of-type(2) h2 strong {
 	}
 }
 
-body section:last-of-type {
-	background-color: var(--color-background);
-}
-section:nth-last-of-type(2) {
-	background-color:var(--color-blauw);
-}
 
 /* ARTIKELEN STIMOROL */
 
@@ -441,7 +429,12 @@ section:nth-last-of-type(1) > ul {
 section:nth-last-of-type(1) ul li{
 	background-color:var(--color-red);
 	display:grid;
+}
 
+ /* Zo gedaan zodat hij niet groter wordt dan de containers */
+section:nth-of-type(3) img {
+	max-width: 100%;
+	height: auto;
 }
 
 /* TITEL artikel */
@@ -454,24 +447,18 @@ main > section:nth-last-of-type(1)  ul li h3 {
 }
 
 /* KAUWGOM tekst boven artikel */
-main > section:nth-last-of-type(1) ul li h4 {
+main > section:nth-last-of-type(1) ul li p {
 	background-image: linear-gradient(110deg, transparent 6.7em, #e30714 .7em);
 	padding: .5em 2em .5em .5em;
 	position: absolute;
 	background-color: var(--color-blauw);
 	float: left;
 	float: top;
-	transform: translateY(-1.3339em);
-	order:1;
+	transform: translateY(-1em);
+	order:1;	
 }
 main > section:nth-last-of-type(1) ul li a {
 	order:3;
-}
-
-/* zorgt ervoor dat de image downscaled, maar nooit groter dan zijn orginele formaat */
-main > section:nth-last-of-type(1) img {
-	max-width: 50%;
-  	height: auto;
 }
 
 @media (min-width:48em) {
@@ -480,14 +467,15 @@ main > section:nth-last-of-type(1) img {
 	}
 
 	body > a:last-of-type {
-		position: relative;
-		/* transform: translateX(30em); */
-		
+		position: relative;		
 	}
 }
 
-/* FOOTER */
 
+
+
+
+/* FOOTER */
 /* Socials Icons */
 
 footer{
@@ -562,15 +550,3 @@ a:last-of-type > button {
 	transform: rotate(45deg);
 	background-color: transparent;
 }
-
- /* Zo gedaan zodat hij niet groter wordt dan de containers */
-main section:nth-of-type(3) img {
-	max-width: 100%;
-	height: auto;
-}
-
-
-
-
-
-

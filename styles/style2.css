@@ -18,7 +18,7 @@
   }
 
   a {
-    color: #007bff;
+    color: var(--color-text);
   }
   
   a:hover {
@@ -73,17 +73,64 @@
 
   }
 
-  form{
-    background-color: #f1f1f1;
-    padding-inline:3em;
-    padding-top:3em;
-    padding-bottom:8em;
-  }
+/* HEADER */
+header{
+	padding-bottom:1em;
+	position:relative;
+	background-color:var(--color-blauw);
+	position:relative;
+	z-index:50;
+	margin-top: -1em;
+	padding-top:1em;
+}
 
-  /* HEADER */
+header img {
+	position:absolute;
+	max-width:12em;
+	transform: translate(2em, 2em);
+	z-index:3;
+}
 
-  /*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
+header li {
+	list-style:none;
+}
 
+header nav{
+	position: absolute;
+	visibility:hidden;
+}
+
+/* Hamburger menu als hij open geklapt is */
+header nav.open {
+	visibility: visible;
+	text-align: center;
+	padding-top: 10em;
+	padding-bottom: 10em;
+	justify-content: space-between;
+	z-index: 100;
+	transform: translateY(-3em);
+	transition: 50ms;
+}
+header nav.open {
+	width: 100%;
+	background-color:var(--color-blauw);
+	background-image: url(/images/navi-bg.png);
+	float:bottom;
+}
+
+
+header nav.open ul {
+	display: flex;
+	flex-direction: column;
+	gap:1em;
+}
+
+header nav.open ul li a {
+	font-size:2em;
+	cursor:pointer;
+}
+
+/*  H1 verbergen op de page. Bron: https://www.a11yproject.com/posts/how-to-hide-content/ */
 header > h1{
 	clip:rect(0 0 0 0);
 	clip-path:inset(50%);
@@ -93,27 +140,87 @@ header > h1{
 	white-space:nowrap;
 	width:1px;
 }
-  
-  header li {
-      list-style: none;
-}
-  
-  header {
-      top:100%;
-      background-color:var(--color-blauw);
-      padding:1em 2em 1em 2em;
-      position:relative;
-      z-index:50;
+
+header > h1 > button {
+	display: flex;
+	flex-wrap: nowrap;
 }
 
-header img {
-    max-width:10em;
-}
-  
 header > ul {
 	display:flex;
 	justify-content:left;
 	gap:2em;
+	flex-wrap: nowrap;
+    margin-top: 1em;
+	z-index: 101;
+}
+
+header > ul > li {
+	max-width:19em;
+}
+
+
+
+
+
+
+/* HEADER SCHUIN hb menu */ 
+header >  button {
+	background-image:linear-gradient(110deg, transparent .7em, white .7em);
+	font-weight:600;
+	color:var(--color-blauw);
+	box-shadow:5px 5px 10px 0 rgb(0 0 0 / 25%);
+	border:none;
+	background-color:transparent;
+	position: absolute;
+	right:1em;
+	transform: translateY(2em);
+	min-width:2em;
+	aspect-ratio:1/1;
+	padding-inline:1em;
+	padding-block:.5em;
+	z-index: 200;
+}
+
+header > button:hover {
+	color: rgb(63, 63, 63);
+}
+
+/* HAMBURGER ICON */
+header > button > ul {
+	display:grid;
+	list-style:none;
+	margin-left:0;
+	padding-left:0;
+}
+
+header > button > ul > li {
+	height:.20em;
+	width:1em;
+	background-color:var(--color-blauw);
+	grid-column-start:1;
+	grid-row-start:1;
+	transition:.25s;
+	
+}
+
+/* hamburger menu gesloten */
+header > button > ul > li:nth-of-type(1) {
+	transform:translateY(-.33em);
+}
+header > button > ul > li:nth-of-type(3) {
+	transform:translateY(.33em);
+}
+
+/* hamburger menu als hij open is */
+header > button.open > ul > li:nth-of-type(1) {
+	transform:rotate(45deg);
+}
+header > button.open > ul > li:nth-of-type(2) {
+	transform:scaleX(0);
+}
+header > button.open > ul > li:nth-of-type(3) {
+	transform:rotate(-45deg);
 }
 
 
@@ -121,26 +228,24 @@ header > ul {
 
 
 /* MAIN */
-
 form{
+    background-color: #f1f1f1;
     padding-inline:2em;
     padding-block:2em;
-
+    padding-bottom:6em;
     max-width: 48em;
     margin:0 auto;
+    margin-top:4em;
 }
+
 form > h2{
     font-size:2em;
 }
 
-
-form > button {
+form > button  {
     padding-block:1em;
     padding-inline:3em;
     background: #007bff;
-}
-
-form > button  {
     color: var(--color-text);
     background-color: #007bff;
     border-radius: none;
@@ -162,12 +267,10 @@ form > section:nth-of-type(1) {
 
 form > section:nth-of-type(2) {
     padding-bottom:1em;
-
 }
 
 form > section:nth-of-type(3) {
     padding-bottom:1em;
-
 }
 
 form section:nth-of-type(2) label:last-of-type{
@@ -179,38 +282,12 @@ form section:last-of-type button {
     width:8em;
     height:3em;
     float: right;
-    }
+}
 
 form section:last-of-type button:hover {
-background-color: var(--color-blauw);
-color: var(--color-text);
-border-color:var(--color-text)
-}
-
-option {
-    color:var(--color-blauw);
-}
-
-select {
-    color:var(--color-blauw)
-}
-
-select#keuze {
-    padding:.8em;
-    padding-inline:.9em ;
-}
-
-label {
-    display:flex;
-    margin-bottom:1em;
-    padding-top:2em;
-}
-
-textarea{
-    padding-top:.5em;
-    padding-left: 1em;
-    height: 10em;
-    margin-top:1em;
+    background-color: var(--color-blauw);
+    color: var(--color-text);
+    border-color:var(--color-text)
 }
 
 /* INPUTS */
@@ -218,12 +295,6 @@ input{
     padding:1em;
     padding-inline:1em;
 }
-
-input[type=number] {
-    -moz-appearance: textfield;
-    -webkit-appearance: none;
-    margin: 0;
-  }
 
 input:nth-last-of-type(6){
     color: var(--color-blauw);
@@ -240,6 +311,37 @@ display: none;
 input p {
     color: var(--color-blauw);
 }
+
+label {
+    display:flex;
+    margin-bottom:1em;
+    padding-top:2em;
+}
+
+option {
+    color:var(--color-blauw);
+}
+
+select {
+    color:var(--color-blauw)
+}
+
+select#keuze {
+    padding:.8em;
+    padding-inline:.9em ;
+}
+
+section > form > section:last-of-type > p > a {
+    color: #007bff;
+}
+
+textarea{
+    padding-top:.5em;
+    padding-left: 1em;
+    height: 10em;
+    margin-top:1em;
+}
+
 
 @media (min-width:40em) {
     form section:nth-of-type(1) {
@@ -304,10 +406,6 @@ footer ul:first-of-type li {
 	padding: 1em 1em 1em 1em;
 }
 
-footer ul:first-of-type li a{
-	
-}
-
 /* Links in de footer */
 footer ul:nth-of-type(2) li {
 	display: flex;
@@ -334,7 +432,6 @@ footer > p {
 }
 
 /* Logo onderaan */
-
 footer > a {
 	display: flex;
 	padding: 1em 0em 2em 1em;
